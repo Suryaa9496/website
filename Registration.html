@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="registration.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return validateForm()">
+            <div class="header">
+                <h1>Create User</h1>
+            </div>
+            
+            <div class="input-row">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" placeholder="Enter your First name" required>
+            </div>
+            
+            <div class="input-row">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" placeholder="Enter your Last name" required> 
+            </div>
+            
+            <div class="input-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required> 
+            </div>
+            
+            <div class="input-row">
+                <label for="email" class="email">Email id </label>  
+                <input type="email" id="email" placeholder="Enter your Email id" required>
+            </div>
+            
+            <div class="input-row">
+                <label for="password" class="password">Password </label>  
+                <input type="password" id="password" placeholder="Enter your password"  pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                required>
+            </div>
+            
+            <div class="input-row">
+                <label for="confirm-password" class="password">Confirm Password </label>  
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <span id="password-error" style="color: rgb(124, 33, 33); display: none;">Passwords do not match</span>
+            </div>
+            <div class="input-row">
+                <label for="dob" class="dob">DOB</label>  
+                <input type="date" id="dob" placeholder="Enter your date og birth" required>
+            </div>
+            
+            <div class="input-row radio-row">
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            
+            <div class="input-row">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="#" selected disabled>Select</option>
+                    <option value="#">India</option>
+                    <option value="#">USA</option>
+                    <option value="#">Russia</option>
+                    <option value="#">UK</option>
+                    <option value="#">UAE</option>
+                    <option value="#">Australia</option>
+                </select>
+            </div>
+            
+            <input type="checkbox" value="yes">
+            <label for="terms">I have read and accept the <a href="terms.html">terms and conditions</a></label>
+            <p>Already have an account <a href="login.html">click here</a></p>
+            
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

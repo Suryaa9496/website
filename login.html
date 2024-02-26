@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return validate()">
+            <h1>User Login</h1>
+            
+            <div class="input-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" oninput="checkFields()" required> 
+            </div>
+        
+            <div class="input-row">
+                <label for="password" class="password">Password </label>  
+                <input type="password" id="password" placeholder="Enter your password" oninput="checkFields()" required>
+            </div>  
+            <input type="checkbox" value="yes" required>
+            <label for="terms">I have read and accept the <a href="terms.html">terms and conditions</a></label>
+            <p>Dont have an account <a href="Registration.html">click here</a></p>
+            
+            <div class="btn">
+                <button id="button" type="submit" disabled>Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
